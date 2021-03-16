@@ -39,7 +39,7 @@
 # In this instance it would be use for hyperparameter optimisation. To run an experiment, from the
 # Project window click Experiments > Run Experiment with the following settings.
 # * **Script** : 4_train_models.py
-# * **Arguments** : 5 lbfgs 100 _(these the cv, solver and max_iter parameters to be passed to
+# * **Arguments** : 5 lbfgs 100 (these the cv, solver and max_iter parameters to be passed to
 # LogisticRegressionCV() function)
 # * **Kernel** : Python 3
 # * **Engine Profile** : 1 vCPU / 2 GiB
