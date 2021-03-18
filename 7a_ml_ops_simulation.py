@@ -149,8 +149,8 @@ def churn_error(item,percent):
     return True if item=='Yes' else False
 
   
-# Get 1000 samples  
-df_sample = df.sample(1000)
+# Get 250 samples  
+df_sample = df.sample(250)
 
 df_sample.groupby('Churn')['Churn'].count() 
 
@@ -162,7 +162,7 @@ df_sample_clean = df_sample.\
 # Create an array of model responses.
 response_labels_sample = []
 
-# Make 1000 calls to the model with increasing error
+# Make 250 calls to the model with increasing error
 percent_counter = 0
 percent_max = len(df_sample_clean)
 
