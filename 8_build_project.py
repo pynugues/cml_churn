@@ -48,10 +48,8 @@ except:
         storage_environment_params)
     os.environ["STORAGE"] = storage
 
-!hdfs dfs -mkdir -p $STORAGE/datalake
-!hdfs dfs -mkdir -p $STORAGE/datalake/data
-!hdfs dfs -mkdir -p $STORAGE/datalake/data/churn
-!hdfs dfs -copyFromLocal /home/cdsw/raw/WA_Fn-UseC_-Telco-Customer-Churn-.csv $STORAGE/datalake/data/churn/WA_Fn-UseC_-Telco-Customer-Churn-.csv
+!hadoop fs -mkdir -p $STORAGE/datalake/data/churn
+!hadoop fs -copyFromLocal /home/cdsw/raw/WA_Fn-UseC_-Telco-Customer-Churn-.csv $STORAGE/datalake/data/churn/WA_Fn-UseC_-Telco-Customer-Churn-.csv
 
 # This will run the data ingest file. You need this to create the hive table from the
 # csv file.
